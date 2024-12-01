@@ -13,21 +13,28 @@ go get github.com/bxcodec/faker/v3
 ```
 
 
-## 実行方法
+## デモ
 
-- 以下のコマンドを使用して、実行する。
-
+### 1. ターミナルを2つ開きます。
+- 1つ目のターミナルでサーバーを起動します
 ```sh
 go run main.go server
 ```
+- 2つ目のターミナルでクライアントを起動します
 ```sh
 go run main.go client
 ```
-クライアント側のターミナルで任意の値を入力
+  
+### 2. クライアントでメッセージを入力:
+- クライアント側のターミナルで以下のメッセージを入力し、Enterを押します。
+  - "name": サーバーがランダムな名前を生成してクライアントに送信します。
+  - "email": サーバーがランダムなメールアドレスを生成してクライアントに送信します。
+  - その他の文字列: "Unknown request"というメッセージが返されます。
+  - "exit": クライアント側の接続を終了します。
+
+<img width="1200" alt="local_chat_messenger_go" src="https://github.com/user-attachments/assets/149c5a06-9235-42a9-8923-13674bb333c0">
+<img width="1200" alt="local_chat_messenger_go3" src="https://github.com/user-attachments/assets/67ce97c8-2696-467f-a086-264caa30b39b">
 
 ### 注意
 - 名前付きパイプ（UNIXソケット）を使用しているため、Windowsの標準的なコマンドプロンプトやPowerShellでは動作しません。
 - このアプリケーションはLinuxまたはWSL（Windows Subsystem for Linux）環境で動作します。
-
-
-## デモ
